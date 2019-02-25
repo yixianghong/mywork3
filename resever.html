@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>THE Tango</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+    crossorigin="anonymous">
+  <link href="theme/css/t-datepicker.min.css" rel="stylesheet" type="text/css">
+  <link href="theme/css/themes/t-datepicker-blue.css" rel="stylesheet" type="text/css">
+  <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32">
+</head>
+<style>
+  select {
+    cursor: pointer;
+    margin: 5px 0;
+    opacity: 1;
+    background: rgba(119, 136, 153, 0.411);
+    border: 0px solid rgba(139, 139, 139, 0.801);
+    border-radius: 10px;
+    padding: 1px 25px;
+    color: rgb(0, 0, 0);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: left;
+    outline: none;
+    -webkit-appearance: none;
+    transition: .5s;
+
+  }
+
+  .t-dates {
+    padding: 12px 10px;
+  }
+
+  .fas {
+    font-size: 20px;
+  }
+
+  .t-next,
+  .t-prev,
+  .t-table-condensed td,
+  .t-table-condensed th {
+    text-align: center;
+    padding: 5px;
+  }
+
+
+
+  .t-check-out .t-datepicker-day {
+    left: 135px;
+  }
+
+  .t-datepicker-day {
+    width: 544px;
+    top: -167px;
+    left: 260px;
+  }
+
+  @media (max-width:992px) {
+    .t-datepicker-day {
+      top: -2px;
+      left: -49px;
+    }
+
+    .t-check-out .t-datepicker-day {
+      top: -2px;
+      left: -170px
+    }
+
+  }
+
+
+
+  .t-datepicker-days .t-table-wrap {
+    width: 46%;
+    margin: 0 1%;
+  }
+
+  .t-day-check-in,
+  .t-month-check-in,
+  .t-year-check-in,
+  .t-day-check-out,
+  .t-month-check-out,
+  .t-year-check-out,
+  .t-date-check-in,
+  .t-date-check-out {
+    color: black;
+  }
+
+  .d-flex {
+    display: flex;
+    flex-direction: column;
+  }
+</style>
+
+<body>
+  <div id="top"></div>
+  <header>
+    <div class="container-fluid ">
+      <div class="datebtn"><i class="fas fa-search-plus date"></i></i></div>
+      <div class="header  animated fadeInDown">
+        <div id="logo" class="animated tada">
+          <a href="index.html">
+            <h1>THE Tango</h1>
+          </a>
+        </div>
+
+        <div id="nav">
+          <ul class="animated bounceInDown">
+            <li><a href="index.html">home</a></li>
+            <li><a href="feature.html">features</a></li>
+            <li><a href="news.html">news</a></li>
+            <li><a class="active" href="resever.html">reserve</a></li>
+
+          </ul>
+        </div>
+        <div class="other">
+          <a href="https://www.facebook.com/tangohotels/"><i class="fab fa-facebook-square"></i></i></a>
+          <a href="https://www.instagram.com/thetangohotels/"><i class="fab fa-instagram"></i></a>
+          <div class="language">
+            <a href="#">CH</a>
+            <span class="line">|</span>
+            <a class="changeselect" href="#">EN</a>
+          </div>
+          <div class="menu1">
+            <i class="fas fa-bars"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="section-intro">
+    <div class="container">
+      <div class="photo-slider-wrap">
+        <div class="photo-slider">
+          <div class="back-img active" style="background-image: url('img/ca.jpg')">
+            <div class="caption">
+              長安館
+            </div>
+          </div>
+          <div class="back-img" style="background-image: url('img/ca4.jpg')">
+            <div class="caption">
+              長安館
+            </div>
+          </div>
+          <div class="back-img" style="background-image: url('img/ca9.jpg')">
+            <div class="caption">
+              長安館
+            </div>
+          </div>
+          <div class="back-img" style="background-image: url('img/ca10.jpg')">
+            <div class="caption">
+              長安館
+            </div>
+          </div>
+          <div class="back-img" style="background-image: url('img/ca11.jpg')">
+            <div class="caption">
+              長安館
+            </div>
+          </div>
+          <div class="back-img" style="background-image: url('img/ca12.jpg')">
+            <div class="caption">
+              長安館
+            </div>
+          </div>
+          <div class="back-img" style="background-image: url('img/ca7.jpg')">
+            <div class="caption">
+              長安館
+            </div>
+          </div>
+          <div class="back-img" style="background-image: url('img/ca5.jpg')">
+            <div class="caption">
+              長安館
+            </div>
+          </div>
+          <div class="back-img" style="background-image: url('img/ca6.jpg')">
+            <div class="caption">
+              長安館
+            </div>
+          </div>
+          <div class="back-img" style="background-image: url('img/ca8.jpg')">
+            <div class="caption">
+              長安館
+            </div>
+          </div>
+          <div class="back-img" style="background-image: url('img/ca23.jpg')">
+            <div class="caption">
+              長安館
+            </div>
+          </div>
+          <div class="back-img" style="background-image: url('img/ca20.jpg')">
+            <div class="caption">
+              長安館
+            </div>
+          </div>
+          <div class="back-img" style="background-image: url('img/ca21.jpg')">
+            <div class="caption">
+              長安館
+            </div>
+          </div>
+
+        </div>
+
+        <div class="slider-arrow slide-next" id="slide-next">
+          <i class="fas fa-arrow-circle-right"></i>
+        </div>
+        <div class="slider-arrow slide-prev" id="slide-prev">
+          <i class="fas fa-arrow-circle-left"></i>
+        </div>
+      </div>
+
+      <div class="photo-slider-thumb">
+        <div>
+          <div class="back-img" style="background-image: url('img/ca.jpg')">
+            <div class="caption">
+              長安館外觀
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="back-img" style="background-image: url('img/ca4.jpg')">
+            <div class="caption">
+              交誼廳
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="back-img" style="background-image: url('img/ca9.jpg')">
+            <div class="caption">
+              資訊區
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="back-img" style="background-image: url('img/ca10.jpg')">
+            <div class="caption">
+              餐廳
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="back-img" style="background-image: url('img/ca11.jpg')">
+            <div class="caption">
+              長安館
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="back-img" style="background-image: url('img/ca12.jpg')">
+            <div class="caption">
+              長安館
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="back-img" style="background-image: url('img/ca7.jpg')">
+            <div class="caption">
+              長安館
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="back-img" style="background-image: url('img/ca5.jpg')">
+            <div class="caption">
+              長安館
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="back-img" style="background-image: url('img/ca6.jpg')">
+            <div class="caption">
+              長安館
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="back-img" style="background-image: url('img/ca8.jpg')">
+            <div class="caption">
+              交誼廳
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="back-img" style="background-image: url('img/ca23.jpg')">
+            <div class="caption">
+              資訊區
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="back-img" style="background-image: url('img/ca20.jpg')">
+            <div class="caption">
+              餐廳
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="back-img" style="background-image: url('img/ca21.jpg')">
+            <div class="caption">
+              長安館
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    <div class="information">
+      <div class="col-6 d-flex">
+        <div class="slide_title">
+          <h3>天閣酒店-長安館 <br>(近中山捷運站)</h2>
+            <h6>Taipei City</h6>
+        </div>
+        <div class="slide_info">
+          交通與週邊設施
+          <ul>
+            <li><i class="fas fa-plane-departure"></i>台北松山機場 (TSA) 3.1公里 16分鐘</li>
+            <li><i class="fas fa-hospital-alt"></i>台北市立聯合醫院中興院區 1.6公里</li>
+            <li><i class="fas fa-shopping-cart"></i>逛街購物 Shilin Night Market</li>
+            <li><i class="fas fa-money-bill-alt"></i>提款機 現場設有提款機</li>
+            <li><i class="fas fa-store-alt"></i>便利商店 1分鐘</li>
+            <li><i class="fas fa-parking"></i>附設停車場</li>
+          </ul>
+          服務設施
+          <li> <i class="fas fa-wifi"></i>無線WI-FI</li>
+          <li><i class="fas fa-coffee"></i>24小時交誼廳</li>
+          <li><i class="fas fa-globe"></i>日語 英語 中文</li>
+          <li><i class="fas fa-laptop"></i>桌上型電腦</li>
+          <li><i class="fas fa-swimming-pool"></i>游泳池</li>
+          <li><i class="fas fa-dumbbell"></i>健身房</li>
+        </div>
+
+      </div>
+      <div class="col-6 d-flex">
+
+        <div class="googlemap">
+          <iframe class="google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.538789669661!2d121.52250441546776!3d25.04972138396501!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a96f7176062f%3A0xc0513a94be203dc5!2zMTA0OTHlj7DljJfluILkuK3lsbHljYDmnpfmo67ljJfot684MOiZnw!5e0!3m2!1szh-TW!2stw!4v1543474858882"
+            width="400" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+
+        <div class="rbooking">
+          <div class="slide_title center">
+            <h3>訂房搜尋</h3>
+          </div>
+          <div class="rselectform  ">
+            <div class="rselect_name">
+              <p>成人</p>
+              <p>小孩</p>
+              <p>房間</p>
+              <p>分館</p>
+            </div>
+
+            <div class="rselect">
+              <div class="rnumber">
+
+                <select>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                </select>
+
+                <select>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                </select>
+
+                <select>
+                  <option value="12">1</option>
+                  <option value="12">2</option>
+                  <option value="34">3</option>
+                  <option value="56">4</option>
+                </select>
+
+
+              </div>
+
+
+              <select>
+                <option value="ALL">ALL</option>
+                <option value="ChungAn">ChungAn</option>
+                <option value="LinSen">LinSen</option>
+                <option value="FuXing">FuXing</option>
+                <option value="NanShi">NanShi</option>
+                <option value="XingYi">XingYi</option>
+                <option value="TaiChung">TaiChung</option>
+              </select>
+            </div>
+
+            <div class="t-datepicker">
+              <div class="t-check-in"></div>
+              <div class="t-check-out"></div>
+            </div>
+            <div id="rsearch"><a href=""><i class="fas fa-search"></i></a></div>
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+    <div class="room_container">
+      <div class="room_title">天鷹客房</div>
+      <div class="room">
+
+        <div class="picture">
+          <img src="img/room3.jpg" alt="">
+        </div>
+        <div class="room_info">
+          <ul>
+            <li>面積9坪/ 29平方公尺/ 一大床160*200cm</li>
+            <li>房型特色:鄰後棟/安靜</li>
+            <li>客房設施：光纖寬頻上網</li>
+            <li>主電源控制系統</li>
+            <li>日本原裝Contessa辦公椅</li>
+            <li>歐洲進口傢飾布傢俱/ 天然鵝絨被寢飾</li>
+            <li>冰箱/ 微波爐/ 熱水瓶/ 鬧鐘/ 電子保險箱/ 熨斗/ 燙馬/ 行李架 </li>
+            <li>日本原裝Sony 40吋電視/ 影音劇院5.1CH藍光DVD音響組合/ iPod. iPhone 迷你音響</li>
+          </ul>
+        </div>
+
+        <div class="buy_info">
+          <div class="much">NT$5,315</div>
+          <div class="btn_buy"><a href="">立即預訂</a></div>
+        </div>
+
+      </div>
+
+    </div>
+    <div class="room_container">
+      <div class="room_title">天隅客房</div>
+      <div class="room">
+
+        <div class="picture">
+          <img src="img/room2.jpg" alt="">
+        </div>
+        <div class="room_info">
+          <ul>
+            <li>面積10坪/ 33平方公尺/ 一大床180*200cm </li>
+            <li>房型特色:270度景觀/木質地板小閣樓/床頭趣味造型設計</li>
+            <li>客房設施：光纖寬頻上網</li>
+            <li>主電源控制系統</li>
+            <li>日本原裝Contessa辦公椅</li>
+            <li>歐洲進口傢飾布傢俱/ 天然鵝絨被寢飾</li>
+            <li>冰箱/ 微波爐/ 熱水瓶/ 鬧鐘/ 電子保險箱/ 熨斗/ 燙馬/ 行李架 </li>
+            <li>日本原裝Sony 40吋電視/ 影音劇院5.1CH藍光DVD音響組合/ iPod. iPhone 迷你音響</li>
+          </ul>
+        </div>
+
+        <div class="buy_info">
+          <div class="much">NT$4,315</div>
+          <div class="btn_buy"><a href="">立即預訂</a></div>
+        </div>
+
+      </div>
+
+    </div>
+    <div class="room_container">
+      <div class="room_title">天豪客房</div>
+      <div class="room">
+
+        <div class="picture">
+          <img src="img/news4.jpg" alt="">
+        </div>
+        <div class="room_info">
+          <ul>
+            <li>面積10坪/ 33平方公尺/ 一大床180*200cm</li>
+            <li>房型特色:大型多功能書桌/ 臥房穿透浴室</li>
+            <li>客房設施：光纖寬頻上網</li>
+            <li>主電源控制系統</li>
+            <li>日本原裝Contessa辦公椅</li>
+            <li>歐洲進口傢飾布傢俱/ 天然鵝絨被寢飾</li>
+            <li>冰箱/ 微波爐/ 熱水瓶/ 鬧鐘/ 電子保險箱/ 熨斗/ 燙馬/ 行李架 </li>
+            <li>日本原裝Sony 40吋電視/ 影音劇院5.1CH藍光DVD音響組合/ iPod. iPhone 迷你音響</li>
+          </ul>
+        </div>
+
+        <div class="buy_info">
+          <div class="much">NT$4,615</div>
+          <div class="btn_buy"><a href="">立即預訂</a></div>
+        </div>
+
+      </div>
+
+    </div>
+    <div class="room_container">
+      <div class="room_title">天威套房</div>
+      <div class="room">
+
+        <div class="picture">
+          <img src="img/room.jpg" alt="">
+        </div>
+        <div class="room_info">
+          <ul>
+            <li>面積12坪/ 39平方公尺/ 一大床180*200cm</li>
+            <li>房型特色:客廳臥室獨立/一房一廳設計</li>
+            <li>客房設施：光纖寬頻上網</li>
+            <li>主電源控制系統</li>
+            <li>日本原裝Contessa辦公椅</li>
+            <li>歐洲進口傢飾布傢俱/ 天然鵝絨被寢飾</li>
+            <li>冰箱/ 微波爐/ 熱水瓶/ 鬧鐘/ 電子保險箱/ 熨斗/ 燙馬/ 行李架 </li>
+            <li>日本原裝Sony 40吋電視/ 影音劇院5.1CH藍光DVD音響組合/ iPod. iPhone 迷你音響</li>
+          </ul>
+        </div>
+
+        <div class="buy_info">
+          <div class="much">NT$5,115</div>
+          <div class="btn_buy"><a href="">立即預訂</a></div>
+        </div>
+
+      </div>
+
+    </div>
+    <div class="room_container">
+      <div class="room_title">天璽雙人房</div>
+      <div class="room">
+
+        <div class="picture">
+          <img src="img/slide6.jpg" alt="">
+        </div>
+        <div class="room_info">
+          <ul>
+            <li>面積13坪/ 43平方公尺/ 兩小床 110*200cm</li>
+            <li>房間特色:後陽台/ 洗脫烘滾筒洗衣機</li>
+            <li>客房設施：光纖寬頻上網</li>
+            <li>主電源控制系統</li>
+            <li>日本原裝Contessa辦公椅</li>
+            <li>歐洲進口傢飾布傢俱/ 天然鵝絨被寢飾</li>
+            <li>冰箱/ 微波爐/ 熱水瓶/ 鬧鐘/ 電子保險箱/ 熨斗/ 燙馬/ 行李架 </li>
+            <li>日本原裝Sony 40吋電視/ 影音劇院5.1CH藍光DVD音響組合/ iPod. iPhone 迷你音響</li>
+          </ul>
+        </div>
+
+        <div class="buy_info">
+          <div class="much">NT$6,675</div>
+          <div class="btn_buy"><a href="">立即預訂</a></div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <div class="footer_copyright">
+    <p>COPYRIGHT © 2018 THE Tango Group ALL RIGHTS RESERVED.</p>
+  </div>
+
+  <div class="top">
+    <a href="#top" id="gotop"> <i class="fas fa-arrow-up"></i></a>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/clip_carousel.js"></script>
+  <script src="theme/js/t-datepicker.min.js"></script>
+  <script>
+
+    $("#gotop").on("click", function (e) {
+      e.preventDefault()
+      var target = $(this).attr("href")
+      var offset = $(target).offset();
+      console.log(offset)
+      $("html,body").animate({ "scrollTop": offset.top })
+    })
+
+    $(document).ready(function () {
+      // Call global the function
+      $('.t-datepicker').tDatePicker({
+        // options here
+      });
+    });
+
+    $(".datebtn").on("click", function () {
+      $(".rbooking").fadeToggle()
+    })
+
+    $(".menu1").click(function() {
+      $("ul").removeClass("bounceInDown")
+      $("#nav").stop().fadeToggle();
+      
+  });
+
+  var scroll = Array()
+    var i = 0
+    scroll[0] = 0
+    $(window).on("scroll", function () {
+        i++
+        scroll[i] = $(this).scrollTop()
+        if (scroll[i] > scroll[i - 1]) {
+            $(".header").css("top","-88px")
+        }else{
+            $(".header").css("top","0px")
+        }
+    })
+  </script>
+
+</body>
+
+</html>

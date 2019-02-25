@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>THE Tango</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link href="theme/css/t-datepicker.min.css" rel="stylesheet" type="text/css">
+    <link href="theme/css/themes/t-datepicker-blue.css" rel="stylesheet" type="text/css">
+</head>
+<style>
+    .t-datepicker-days {
+        width: 650px;
+        left: 310px;
+        top: -233px;
+    }
+
+    .t-check-out .t-datepicker-day {
+        left: 109%;
+    }
+
+    .t-arrow-top {
+        top: 43px;
+        left: 514.2px;
+    }
+
+    @media (max-width:992px) {
+
+
+        .t-datepicker-day {
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            top: 100px;
+            left: 0px;
+        }
+
+        .t-check-out .t-datepicker-day {
+            top: 107px;
+            left: -152px;
+        }
+        .content .row .col-6{
+            width: 100%;
+            margin-bottom:50px;
+        }
+
+    }
+</style>
+
+
+<body>
+
+    <div id="top"></div>
+
+    <header>
+        <div class="header  animated fadeInDown">
+            <div id="logo" class="animated tada">
+                <a href="index.html">
+                    <h1>THE Tango</h1>
+                </a>
+            </div>
+
+            <div id="nav">
+                <ul class="animated bounceInDown">
+                    <li><a class="active" href="index.html">home</a></li>
+                    <li><a href="feature.html">features</a></li>
+                    <li><a href="News.html">news</a></li>
+                    <li><a href="resever.html">reserve</a></li>
+
+                </ul>
+            </div>
+            <div class="other">
+                <a href="https://www.facebook.com/tangohotels/"><i class="fab fa-facebook-square"></i></i></a>
+                <a href="https://www.instagram.com/thetangohotels/"><i class="fab fa-instagram"></i></a>
+                <div class="language">
+                    <a href="#">CH</a>
+                    <span class="line">|</span>
+                    <a class="changeselect" href="#">EN</a>
+                </div>
+                <div class="menu1">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <div class="slide_wrap">
+        <div class="slide animated fadeIn">
+            <img src="img/slide.jpg" alt="">
+            <img src="img/slide2.jpg" alt="">
+            <img src="img/slide6.jpg" alt="">
+            <img src="img/slide4.jpg" alt="">
+            <img src="img/slide3.jpg" alt="">
+            <img src="img/slide5.jpg" alt="">
+            <img src="img/slide1.jpg" alt="">
+        </div>
+    </div>
+
+
+    <div class="booking animated fadeInLeft  ">
+        <div class="selectform animated pulse ">
+            <div class="select_name">
+                <p>adult(s)</p>
+                <p>children</p>
+                <p>ROOM</p>
+                <p>Branch</p>
+            </div>
+            <div class="select">
+                <div class="number">
+                    <select name="people" id="people">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+
+                    <select name="children" id="children">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+
+                    <select name="room" id="room">
+                        <option value="12">1</option>
+                        <option value="12">2</option>
+                        <option value="34">3</option>
+                        <option value="56">4</option>
+                    </select>
+                </div>
+                <select name="Branch" id="Branch">
+                    <option value="ALL">ALL</option>
+                    <option value="ChungAn">ChungAn</option>
+                    <option value="LinSen">LinSen</option>
+                    <option value="FuXing">FuXing</option>
+                    <option value="NanShi">NanShi</option>
+                    <option value="XingYi">XingYi</option>
+                    <option value="TaiChung">TaiChung</option>
+                </select>
+            </div>
+            <div class="t-datepicker">
+                <div class="t-check-in"></div>
+                <div class="t-check-out"></div>
+            </div>
+            <div id="search"><a href="resever.html"><i class="fas fa-search"></i></a></div>
+        </div>
+    </div>
+
+    <main>
+        <div class="content">
+            <div class="container">
+                <div class="wrap_content">
+                    <div class="title">
+                        <h2>ABOUT</h2>
+                        <hr class="white_hr">
+                    </div>
+                    <div class="row">
+                        <div class="col-6 main_pic">
+                            <div class="picture"></div>
+                        </div>
+                        <div class="col-6">
+                            THE Tango Group 天閣酒店集團地處絕佳生活機能、交通樞紐地利之便
+                            全館的設施以房客舒適度為設計初衷，靜謐而幽雅的簡約風格
+                            褪去館外繁鬧景致，臨門一隔，時尚生活可遠可近
+
+                            天閣酒店其現代時尚的低調奢華風，在業界中引領項背
+                            客房設計高雅寬敞，各式設備新穎完善
+                            客房內皆備有多功能商務桌椅，些許浴室設有大型spa浴池、大理石面材淋浴間及蒸氣室
+                            房客專用的交誼廳，每日供應自助式早餐，傍晚及清晨備有飲料與點心，並供應咖啡或茶
+                            此外，還設有專用商務中心及會議室，舉行會議的設備一應俱全
+
+
+                            THE Tango 將陸續朝專業旅館前進，陸續在台北、台中、及大中華區拓展飯店及休閒旅館。
+                        </div>
+                    </div>
+
+                    <div class="title">
+                        <h2>Real reviews from AGODA & BOOKING</h2>
+                        <hr class="white_hr">
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="progress-bar">
+                                <div class="progress no1" style="width: 0;"><span class="barname">Cleanliness</span></div>
+                                <div class="pin animated">92%</div>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress no2" style="width: 0%;"><span class="barname">Location</span></div>
+                                <div class="pin animated">86%</div>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress no3" style="width: 0%;"><span class="barname">Service</span></div>
+                                <div class="pin animated">93%</div>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress no4" style="width: 0%;"><span class="barname">Facilities</span></div>
+                                <div class="pin animated">83%</div>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress no5" style="width: 0%;"><span class="barname">Room comfort and
+                                        quality</span> </div>
+                                <div class="pin animated">80%</div>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress no6" style="width: 0%;"><span class="barname">Value for money</span></div>
+                                <div class="pin animated">85%</div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+
+        <div class="footer_warp">
+
+            <div id="logo2">
+                <img src="img/LOGO.jpg" alt="">
+            </div>
+            <div class="contact">
+                <ul>
+                    <li>
+                        <p>CALL CENTER<br><span class="small">RESERVATION 9:00 -18:00 (MON–SAT)</span></p>
+                    </li>
+
+                    <li><a href="phone">TEL : (+886 2) 25235959</a></li>
+                    <li><a href="phone">Fax : (+886 2) 25236777</a></li>
+                    <li><a href="mailto">E-mail :TheTango@gmail.com</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="footer_copyright">
+            <p>COPYRIGHT © 2018 THE Tango Group ALL RIGHTS RESERVED.</p>
+        </div>
+    </footer>
+
+
+    <div class="top">
+        <a href="#top" id="gotop"> <i class="fas fa-arrow-up"></i></a>
+    </div>
+
+
+
+    <!-- Optional JavaScript -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="theme/js/t-datepicker.min.js"></script>
+    <script>
+        $(".slide").each(function () {
+            var slides = $(this).find("img"); //找到.slide裡面所有img
+            var slidecount = $(slides).length; //計算.slide裡面有幾張
+            var current = 0;  //目前是第0張
+            slides.eq(current).animate({ opacity: 1 }, 0); //第0張的照片顯示
+            setInterval(next, 5000); //每3.5秒執行一次next
+            function next() {  //next的函式
+                var next = (current + 1) % slidecount; //0~3一直跑
+                slides.eq(current).animate({ opacity: 0 }, 2500); //目前的照片淡出
+                slides.eq(next).animate({ opacity: 1 }, 2500);//下一張的照片淡入
+                current = next; //目前的照片+1變下一張
+            }
+        });
+
+        $("select").on("focus", function () {
+            $(this).toggleClass("focus")
+        })
+
+        $("select").on("blur", function () {
+            $(this).toggleClass("focus")
+        })
+
+        $(".language a").on("click", function () {
+            $(this).addClass("changeselect")
+            $(this).siblings().removeClass("changeselect")
+        })
+
+        $(document).ready(function () {
+            // Call global the function
+            $('.t-datepicker').tDatePicker({
+                // options here
+            });
+        });
+
+
+
+        $(window).on("scroll", function () {
+            // var widthArray = [92,86,93,83,80,85]
+            var scroll = $(window).scrollTop();
+            if (scroll > 900) {
+                console.log(scroll)
+                $(".no1").css({ "width": ("90" + "%") })
+                $(".no2").css({ "width": ("86" + "%") })
+                $(".no3").css({ "width": ("93" + "%") })
+                $(".no4").css({ "width": ("83" + "%") })
+                $(".no5").css({ "width": ("80" + "%") })
+                $(".no6").css({ "width": ("85" + "%") })
+                $(".pin").css({ "opacity": "1" })
+                $(".pin").addClass("rubberBand")
+                $(".content .hidden,.content .container").css({ "opacity": "1" })
+                $(".content .title").addClass("zoomIn")
+
+            }
+        })
+
+
+        $(window).on(("scroll"), function () {
+            var scroll = $(window).scrollTop();
+            if (scroll > 1280) {
+                $("footer").css({ "opacity": "1" })
+            }
+        })
+
+
+        $("#gotop").on("click", function (e) {
+            e.preventDefault()
+            var target = $(this).attr("href")
+            var offset = $(target).offset();
+            console.log(offset)
+            $("html,body").animate({ "scrollTop": offset.top })
+        })
+
+        $(".menu1").click(function () {
+        $("ul").removeClass("bounceInDown")
+        $("#nav").stop().fadeToggle();
+      })
+
+      var scroll = Array()
+    var i = 0
+    scroll[0] = 0
+    $(window).on("scroll", function () {
+        i++
+        scroll[i] = $(this).scrollTop()
+        if (scroll[i] > scroll[i - 1]) {
+            $(".header").css("top","-88px")
+        }else{
+            $(".header").css("top","0px")
+        }
+    })
+    </script>
+
+
+</body>
+
+</html>
